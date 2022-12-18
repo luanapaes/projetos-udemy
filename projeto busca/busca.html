@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar</title>
+    
+    <link rel="shortcut icon" href="lupa.png" type="image/x-icon">
+</head>
+    <style>
+
+        body{
+            background-color: rgb(218, 196, 238);
+            font-family: sans-serif;
+            position: relative;
+            margin: 0;
+        }
+        h1{
+            margin: 170px 0;
+            text-transform: uppercase;
+            text-align: center;
+            color: rgb(54, 18, 87);
+        }
+
+        form{
+            position: absolute;
+            left: 500px;
+            top: 100px;
+        }
+
+        .input-1{
+            border: none;
+            outline: none;
+            border-radius: 16px;
+            height: 40px;
+            width: 350px;
+        }
+
+        .input-2{
+            background-color: rgb(176, 161, 198);
+            border: none;
+            border-radius: 19px;
+            height: 40px;
+            width: 70px;
+            transition: background-color .3s linear;
+            transition: color .4s linear;
+        }
+
+        .input-2:hover{
+            background-color: rgb(111, 93, 128);
+            color: rgb(194, 147, 240);
+        }
+
+    </style>
+<body>
+    <h1>Buscar</h1>
+    <form action="http://google.com/search" method="get">
+        <input class="input-1" type="text" name="q" placeholder="buscar..">
+        <input class="input-2" type="submit" value="Pesquisar">
+    </form>
+
+</body>
+</html>
