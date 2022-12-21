@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+            background: rgb(255, 255, 255);
+        }
+        label{
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        fieldset{
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        form{
+            width: 500px;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"]{
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            height: 20px;
+            outline: none;
+            
+        }
+
+        .change{
+            display: inline-block;
+            margin-bottom: 8px;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .change:focus + span{
+            box-shadow: 0 0 0 2px rgb(17, 2, 66);
+        }
+
+        span{
+            display: block;
+            width: 60px;
+            height: 30px;
+            border-radius: 40px;
+            background: rgb(203, 240, 254);
+        }
+
+        span::before{
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgb(98, 136, 146);
+            transition: all .2s ease-in-out;
+        }
+        
+        label .change:checked + span::before{
+            transform: translateX(30px);
+            background: rgb(7, 192, 205);
+        }
+
+        input[type="submit"]{
+            margin-left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <form action="">
+            <label>Nome
+                <input type="text" placeholder="nome" autofocus>
+            </label>
+            
+            <label>Sobrenome
+                <input type="text" placeholder="soobrenome">
+            </label>
+
+            <label>E-mail
+                <input type="email" placeholder="e-mail">
+            </label>
+
+            <label for="1">Tecnologias:
+                <input type="checkbox" name="HTML" id="1">Java
+                <input type="checkbox" name="CSS" id="1">CSS
+                <input type="checkbox" name="JavaScript" id="1">JavaScript
+                <input type="checkbox" name="React" id="1">React
+                <input type="checkbox" name="Vue" id="1">Vue
+            </label>
+
+            <label for="2" class="change1">Deseja receber vagas compatíveis com seu perfil?
+                <input type="checkbox" name="sim" id="2" class="change">
+                <span></span>
+            </label>
+
+            <input type="submit">
+        </form>
+    </fieldset>
+</body>
+</html>
